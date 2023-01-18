@@ -1,0 +1,55 @@
+<html> 
+  <meta name="viewport" content="width=device-width">
+  <head>
+    <!-- Fonts used + favicon + css link -->
+    <link rel="icon" href="../icons/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Permanent+Marker">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="../styles/main.css">
+    <title>Randle's Blog</title>
+  </head>
+  <body>
+     <!-- Background -->
+  <div id="page-background">
+    <!-- Header -->
+  <div id="header">
+    <a href="https://svalbird.github.io"><h1 class="head-text">Randle's Blog</h1> 
+    <p class="tagline">(or inane ramblings)</p></a>
+  </div>
+  <div id="main-body">
+    <!-- Blog post -->
+    <div id="blog-post">
+      <div id="post-title">
+        <h2>CSS: Getting in the right position</h2>
+        <p class="current-date"><i>18 January 2022</i></p>
+      </div>
+      <div id="post-content">
+        <p>Positioning CSS elements can be a major headache. The browser has <i>ideas</i> about where things should go, and… well, it’s trying it’s best. Often the best course of action is to just tell it where to put things on the webpage. But there’s a lot of ways of doing that, and picking the right one at the right time can save you from finding fun formatting surprises later on in designing your page.
+          The default position for an element is static. That just means “it goes where it goes”. That’s boring, so lets skip to the interesting ones.
+          <h3>Getting relative</h3>
+          The easiest type of element positioning to conceptualize is relative positioning. Simply type in
+          <p>position: relative;</p>
+          And watch with amazement as nothing happens! Well, nothing <i>should</i> happen, at least.
+          Relative positioning is simply telling the browser “Keep it where it is, I’ll move it around from there.”. With that established we can use that position as a baseline and go from there. For example
+          <p>right: 30px; top: 20px;</p>
+          would move that element 30 pixels <i>away</i> from the right and 20px <i>away</i> from the top from where it already was. Keep in mind that you’re defining the distance the element is <i>from</i> a particular direction, and so it’ll move away from what you specify.
+          Relative positioning is useful when you need to adjust things slightly or when the rough formatting is there, but the precise location needs to be fiddled with. It also maintains its position relative to other elements in the same container, so it’s a bit neater when there’s moving parts or you might need to resize some stuff. That can be a hindrance if you find yourself having to mess with it when you change something, however.
+          <h3>Absolute uncertainty</h3>
+          Sometimes the browser gets it completely wrong. That’s ok – its what absolute positioning is for!
+          Absolute positioning allows you to tell the browser <i>exactly</i> where the element goes in precise terms in its container. For example
+          <p> position: absolute; left:40px; top: 50px;</p>
+          would move the element to exactly 40px from the left and 50px from the top of the containing block it’s in. It’ll ignore whatever formatting was already there.
+          This type of positioning is great for doing unorthodox things or for making sure things stay in a specific spot. It’s inflexible, however, and as making an element’s position absolute can force ti to be ignored by layouts, sometimes elements that would contain it break and need to be adjusted to compensate.
+          <h3>Fixed (for now)</h3>
+          Fixed position is like absolute position but <i>more</i>. It’s the same, with precise information on its location needed, but it’s always relative to the initial viewport (that is, that entire webpage). For example
+          <p> position: fixed; left:40px; top: 50px;</p>
+          would put an element 40px from the left and 50px from the top of the entire page. This is great for ensuring something is <i>exactly</i> where you want it, but this brute-force method has a clear downside – it’s not going to adjust automatically when you change things around it. This is important to keep in mind.
+          <br><br>This list isn’t comprehensive on every aspect of positioning in CSS – looking further into the specific of each is recommended, especially if you’re doing something odd with positions, as they have some specific interactions with things such as inheritance and tables in some cases that can be a bit confusing.
+          Overall, positions are critical in effective CSS coding. Understanding and mastering different types, when to use then, and when <i>not</i> to use them, are skills that will benefit any web designer massively.
+          
+          </p>
+      </div>
+    </div>
+  </body>
+  </html>
