@@ -1,0 +1,212 @@
+/* Removing horizontal scrollbar */
+body, html {
+  overflow-x:hidden;
+}
+
+/* Removing vertical scrollbar while preserving functionality*/
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  background-color: rgb(140, 140, 212);
+}
+
+/*HEADER CSS*/
+/*For non-mobile devices*/
+/*Appears top-right*/
+@media only screen and (min-width: 600px){
+  /*Header div*/
+#header {
+  margin: -10px 100px 0px -10px;
+  padding: 0px 0px 100px 0px;
+  position:fixed;
+  top:0px;
+  width:100%;
+  background-image: linear-gradient(60deg, rgb(165, 165, 236), white);
+  z-index: 2;
+}
+/*Main page title*/
+.head-text {
+  width: 240px;
+  position:absolute;
+  left:20px;
+  font-family: "Pacifico", sans-serif;
+  color:rgb(140, 118, 221)
+}
+/*Tagline underneath*/
+.tagline {
+  color: rgb(192, 0, 0);
+  font-family: "Permanent Marker", sans-serif;
+  position:absolute;
+  top: 45px;
+  left: 40px;
+}
+}
+/*For mobile devices*/
+/* Appears center w/o background */
+@media only screen and (max-width: 600px){
+  #header {
+    display: inline;
+  }
+  /* Main page title */
+  .head-text {
+    text-align: center;
+    font-family: "Pacifico", sans-serif;
+    color:rgb(199, 190, 231);
+    width: 200px;
+    margin: auto;
+    
+  }
+  /* Tagline underneath */
+  .tagline {
+    color: rgb(192, 0, 0);
+    font-family: "Permanent Marker", sans-serif;
+    width: 200px;
+    margin: auto;
+    position:relative;
+    bottom: 18px;
+    left:20px;
+    padding-bottom: 20px;
+  }
+}
+
+/* BLOG POSTS */
+/* For standard non-mobile devices */
+@media only screen and (min-width: 600px){
+
+/* Container for each post */
+#blog-post {
+    font-family: "ABeeZee";
+    margin: 2.5% 10% 2.5% 10%;
+    background-image: linear-gradient(130deg, rgb(165, 165, 236), rgba(255, 255, 255, 0.212));
+    padding: 5px 15px 30px 15px;
+    position:relative;
+    top:70px;
+    z-index: -2;
+    min-height:220px;
+}
+
+/* Title of post */
+#post-title {
+  margin: -10px 0px 0px 0px
+}
+
+/* Date of post format */
+.current-date{
+  margin: -20px 0px 0px 0px;
+}
+
+/* img formats on page */
+img {
+    width:200px;
+    height:auto;
+    text-align: right;
+    float:right;
+    padding: 10px 20px 0px 20px;
+    position: relative;
+    top: -50px;
+}
+}
+
+/* For larger mobile devices */
+/* Aligns img with center of post while maintaining size */
+@media only screen and (max-width: 600px) and (min-width: 320px){
+  #main-body {
+    /* background-color: red; */
+    margin:-30 -10 -100% -10;
+    display: inline;
+  }
+  
+  #blog-post {
+      font-family: "ABeeZee";
+      margin: 2.5% 10% 2.5% 10%;
+      background-image: linear-gradient(130deg, rgb(165, 165, 236), rgba(255, 255, 255, 0.212));
+      padding: 5px 15px 5px 15px;
+      min-height:220px;
+  }
+  
+  #post-title {
+    margin: -10px 0px 0px 0px
+  }
+  
+  .current-date{
+    margin: -20px 0px 0px 0px;
+  }
+  
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    padding: 40px auto 20px auto;
+    margin-top: 20px;
+  }
+  }
+  /* For smaller mobile sizes */
+  /* Resizes img to fit inside post */
+  @media only screen and (max-width: 320px){
+    #main-body {
+      /* background-color: red; */
+      margin:-30 -10 -100% -10;
+      display: inline;
+    }
+    
+    #blog-post {
+        font-family: "ABeeZee";
+        margin: 2.5% 10% 2.5% 10%;
+        background-image: linear-gradient(130deg, rgb(165, 165, 236), rgba(255, 255, 255, 0.212));
+        padding: 5px 15px 5px 15px
+    }
+    
+    #post-title {
+      margin: -10px 0px 0px 0px
+    }
+    
+    .current-date{
+      margin: -20px 0px 0px 0px;
+    }
+    
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      padding: 40px auto 20px auto;
+      margin-top: 20px;
+    }
+    }
+    
+    /* For ultra-large screens */
+    /* Makes post fit around image correctly */
+    @media only screen and (min-width: 2600px){
+
+      
+      #blog-post {
+          font-family: "ABeeZee";
+          margin: 2.5% 10% 2.5% 10%;
+          background-image: linear-gradient(130deg, rgb(165, 165, 236), rgba(255, 255, 255, 0.212));
+          padding: 5px 15px 50px 15px;
+          min-height:220px;
+      }
+      
+      #post-title {
+        margin: -10px 0px 0px 0px
+      }
+      
+      .current-date{
+        margin: -20px 0px 0px 0px;
+      }
+      
+      img {
+          width:200px;
+          height:auto;
+          text-align: right;
+          float:right;
+          padding: 10px 20px 0px 20px;
+          position: relative;
+          top: -50px;
+      }
+    }
