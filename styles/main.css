@@ -17,10 +17,15 @@ body {
   background-color: rgb(140, 140, 212);
 }
 
-a:link { color:rgb(39, 57, 211); text-decoration: none !important; }
-a:visited { color:rgb(39, 57, 211);  text-decoration: none !important; }
-a:hover { color:rgb(39, 57, 211);  text-decoration: none !important; }
-a:active { color:rgb(39, 57, 211);  text-decoration: none !important; }
+a:link { color:rgb(39, 57, 211); text-decoration: none !important;}
+a:visited { color:rgb(39, 57, 211);  text-decoration: none !important;}
+a:hover { color:rgb(39, 57, 211);  text-decoration: none !important;}
+a:active { color:rgb(39, 57, 211);  text-decoration: none !important;}
+
+#read-more {
+  position:relative;
+  z-index: 2;
+}
 
 
 
@@ -96,7 +101,7 @@ a:active { color:rgb(39, 57, 211);  text-decoration: none !important; }
     padding: 5px 15px 30px 15px;
     position:relative;
     top:70px;
-    z-index: -2;
+    z-index: 1;
     min-height:220px;
 }
 
