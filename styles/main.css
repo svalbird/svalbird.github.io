@@ -22,19 +22,13 @@ a:visited { color:rgb(39, 57, 211);  text-decoration: none !important;}
 a:hover { color:rgb(39, 57, 211);  text-decoration: none !important;}
 a:active { color:rgb(39, 57, 211);  text-decoration: none !important;}
 
-#read-more {
-  position:relative;
-  z-index: 2;
-}
-
-
 
 /*HEADER CSS*/
 /*For non-mobile devices*/
 /*Appears top-right*/
 @media only screen and (min-width: 600px){
   /*Header div*/
-#header {
+header {
   margin: -10px 100px 0px -10px;
   padding: 0px 0px 100px 0px;
   position:fixed;
@@ -63,7 +57,7 @@ a:active { color:rgb(39, 57, 211);  text-decoration: none !important;}
 /*For mobile devices*/
 /* Appears center w/o background */
 @media only screen and (max-width: 600px){
-  #header {
+  header {
     display: inline;
   }
   /* Main page title */
@@ -95,7 +89,7 @@ a:active { color:rgb(39, 57, 211);  text-decoration: none !important;}
 @media only screen and (min-width: 600px){
 
 /* Container for each post */
-#blog-post {
+article {
     margin: 2.5% 10% 2.5% 10%;
     background-image: linear-gradient(130deg, rgb(165, 165, 236), rgba(255, 255, 255, 0.212));
     padding: 5px 15px 30px 15px;
@@ -130,13 +124,13 @@ a:active { color:rgb(39, 57, 211);  text-decoration: none !important;}
 /* For larger mobile devices */
 /* Aligns img with center of post while maintaining size */
 @media only screen and (max-width: 600px) and (min-width: 320px){
-  #main-body {
+  main {
     /* background-color: red; */
     margin:-30 -10 -100% -10;
     display: inline;
   }
   
-  #blog-post {
+  article {
       margin: 2.5% 10% 2.5% 10%;
       background-image: linear-gradient(130deg, rgb(165, 165, 236), rgba(255, 255, 255, 0.212));
       padding: 5px 15px 5px 15px;
@@ -163,13 +157,13 @@ a:active { color:rgb(39, 57, 211);  text-decoration: none !important;}
   /* For smaller mobile sizes */
   /* Resizes img to fit inside post */
   @media only screen and (max-width: 320px){
-    #main-body {
+    main {
       /* background-color: red; */
       margin:-30 -10 -100% -10;
       display: inline;
     }
     
-    #blog-post {
+    article {
         margin: 2.5% 10% 2.5% 10%;
         background-image: linear-gradient(130deg, rgb(165, 165, 236), rgba(255, 255, 255, 0.212));
         padding: 5px 15px 5px 15px
@@ -198,7 +192,7 @@ a:active { color:rgb(39, 57, 211);  text-decoration: none !important;}
     @media only screen and (min-width: 2600px){
 
       
-      #blog-post {
+      article {
           margin: 2.5% 10% 2.5% 10%;
           background-image: linear-gradient(130deg, rgb(165, 165, 236), rgba(255, 255, 255, 0.212));
           padding: 5px 15px 50px 15px;
