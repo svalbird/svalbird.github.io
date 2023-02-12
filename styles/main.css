@@ -1,5 +1,5 @@
 /* Removing horizontal scrollbar */
-body, html {
+html {
   overflow-x:hidden;
 }
 
